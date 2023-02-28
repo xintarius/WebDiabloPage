@@ -1,0 +1,50 @@
+:host {
+  display: flex;
+  flex: 1;
+}
+.demo-table {
+  width: 100%;
+  float: left;
+}
+.ng-container {
+  float: left;
+}
+.mat-column-demo-position {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.mat-column-demo-name {
+  padding-left: 16px;
+  font-size: 20px;
+}
+
+.mat-column-demo-weight {
+  font-style: italic;
+}
+
+.mat-column-demo-symbol {
+  width: 32px;
+  text-align: center;
+  font-weight: bold;
+}
+.form {
+  float: left;
+}
+.mat-form-field {
+  float: left;
+}
+.table1 {
+  float: left;
+}
+.section1 {
+  float: left;
+}
+.table-with-records {
+  float: left;
+}
+.container-for-inputs {
+  float: left;
+}

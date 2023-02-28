@@ -1,0 +1,50 @@
+<h1>Panel administracyjny przedmiotów</h1>
+<div id="container-for-inputs">
+  <section id="section1">
+    <form #itemsForm="ngForm" (ngSubmit)="postItem(itemsForm.value)" enctype="multipart/form-data">
+      <label>Item ID</label>
+      <input type="text" name="id" ngModel />
+      <label>Runes</label>
+      <input type="text" name="runes" ngModel />
+      <input type="file" (change)="onFileSelected($event)" accept="image/*" enctype="multipart/form-data" />
+      <img [src]="imagePath" width="10" height="10" alt="" />
+      <button (click)="(itemsForm.value)" value="add Item">add Item</button>
+    </form>
+
+    <button (click)="(imagePath)" value="add Item">add Item</button>
+    <form #itemsForm="ngForm" (ngSubmit)="deleteItem(itemsForm.value)">
+      <input type="submit" value="delete Item" />
+    </form>
+    <form #itemsForm="ngForm" (ngSubmit)="deleteAll(itemsForm.value)">
+      <input type="submit" value="delete all" />
+    </form>
+  </section>
+</div>
+<div id="table-with-records">
+  <table class="table table-bordered table-striped" id="table1">
+    <ng-container>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Runes</th>
+          <th>Images</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let items of item">
+          <td>
+            <span>{{ items.id }}</span>
+          </td>
+          <td>
+            <span>{{ items.runes }}</span>
+          </td>
+          <td>
+            <span
+              ><a href="/"><img src="{{ items?.images }}" alt="available in near future" /></a
+            ></span>
+          </td>
+        </tr>
+      </tbody>
+    </ng-container>
+  </table>
+</div>
